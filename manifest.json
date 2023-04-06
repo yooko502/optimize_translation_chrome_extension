@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "Optimize translation",
+  "description": "Optimize your translation content with chat gpt to make it smoother",
+  "version": "1.0",
+  "icons": {
+    "16": "images/optimize.png",
+    "32": "images/optimize.png",
+    "48": "images/optimize.png",
+    "128": "images/optimize.png"
+  },
+  "action": {
+    "default_popup": "html/popup.html"
+  },
+  "host_permissions": [
+    "https://api.openai.com/*"
+  ]
+}

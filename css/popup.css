@@ -1,0 +1,30 @@
+body {
+    width: 300px;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+    margin: 15px;
+    font-size: 1em;
+}
+
+.submit_btn {
+    color: #fff;
+    background-color: #8B96EB;
+    background-image: -webkit-linear-gradient(top,#9ba6fa,#818ff8);
+    height: 27px;
+    width: 60px;
+    margin-top: 10px;
+    border: 1px solid #a084f5;
+    border-radius: 4px;
+}
+
+.prompt_input {
+    width: 300px;
+    height: 100px;
+}
+
+#warn {
+    font-size: 0.3em;
+    color: crimson;
+}
