@@ -22,14 +22,10 @@ function checkApiKeyInLocalStorage() {
         </div>
         </form></div>
         <div id="result"></div>`;
-
-    document.addEventListener('DOMContentLoaded', function () {
-      document.querySelector('#optimize_input').addEventListener('input', checkInputLength);
-    });
     
     document.addEventListener('DOMContentLoaded', function () {
-      document.querySelector('#submit_context').addEventListener('click', getTranslationResult);
-    });
+          document.querySelector('#submit_context').addEventListener('click', getTranslationResult);
+        });
   } else {
     document.addEventListener('DOMContentLoaded', function () {
       document.querySelector('#submit').addEventListener('click', getApiKey);
@@ -79,21 +75,4 @@ function getTranslationResult() {
       // 处理API错误
       console.error(error);
     });
-}
-
-function checkInputLength(){
-  const promptInput = document.forms["translation_context"]["prompt"].value;
-  const length = promptInput.length;
-  const optimizeDiv = document.getElementById("optimize_input");
-  const warn = document.getElementById("warn");
-  console.log(warn)
-  console.log(length)
-  if(length === 150 && warn === null){
-    const warnDiv = document.createElement("div");
-    warnDiv.id = "warn";
-    const warnText = document.createTextNode("input maxlength is 150");
-    warnDiv.appendChild(warnText);
-    optimizeDiv.appendChild(warnDiv);
-    return false;
-  }
 }
